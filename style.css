@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #cfd1ce;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/*Header*/
+
+header {
+    width: 100%;
+    height: 70px;
+    top: 0;
+    background-color: #403c3c;
+
+}
+.logo>img {
+    height: 70px;
+}
+
+li {
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 14px 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    width: 80px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.menu a:hover {
+    background-color: #6b6b6b;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+#selected {
+    background-color: #6b6b6b;
+    transform: none; 
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    width: 80px; 
+    padding: 14px 10px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+/*Slide*/
+
+.slider-container{
+    margin-top: 5PX;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -500px;
+}
+
+.slider-images{
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+.slider-images img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.slider-img{
+width: 70px;
+border-radius: 6px;
+cursor: pointer;
+position: relative;
+transition: all 1s ease; 
+}
+
+.slider-images .slider-img:first-child,.slider-images .slider-img:last-child{
+    height: 680px;
+}
+
+.slider-images .slider-img:nth-child(2),.slider-images .slider-img:nth-child(6){
+    height: 760px;
+}
+
+.slider-images .slider-img:nth-child(3),.slider-images .slider-img:nth-child(4),.slider-images .slider-img:nth-child(5) {
+    height: 865px;
+}
+
+.slider-img.active{
+    width:766px ;
+    height: 950px ;
+    
+}
+#vol{
+  margin-left: 325px;
+    background-color: #403c3c;
+    border-radius: 15px;
+}
+
+/*Contactos*/
+.form {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    margin-top: 60px;
+}
+
+.container a{
+    
+    padding: 0;
+    text-align: justify;
+}
+
+.form h2 {
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+
+.form p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.form a {
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: black;
+    
+
+}
+
+.form a i {
+    color: #6b6b6b;
+    margin-right: 100px;
+}
+
+.form form .campo,
+textarea {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 14px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+}
+
+.form form textarea {
+    max-width: 530px;
+    min-width: 30px;
+    min-height: 20px;
+    max-height: 140px;
+}
+
+.form .btn {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background: #6b6b6b;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+/*Nosotros*/
+h1{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #403c3c;
+}
+h2{
+    
+        text-align: left;
+        margin-bottom: 2rem;
+        color: #403c3c;
+}
+h4{
+    text-align: left;
+        margin-bottom: 2rem;
+        color: #403c3c;
+}
+.ns{
+    gap: 2rem;
+    align-items: center;
+    display: flex;
+    margin-top: 50px ;
+}
+
+.texto{
+    background:#fff7eb;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+  margin: 10px;
+
+}
+
+.ns img{
+    width: 400px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+/*Productos*/
+
+h1{
+    margin-bottom: 0;
+}
+
+.abrigos{
+ padding: 20px;
+ background-color: #6b6b6b;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 20px;
+ border-radius: 20px;
+}
+
+.hood{
+    background-color: #fff7eb;
+    border-radius: 10px;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.hood:hover{
+    transform: scale(1.05);
+}
+
+.hood img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.hood select, .hood button{
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1rem;
+    border: 1px solid #6b6b6b;
+    border-radius: 5px;
+}
+
+.hood button {
+    background-color: #403c3c;
+    color: white;
+    cursor: pointer;
+}
+
+.hood button:hover{
+    background-color: #6b6b6b;
+}
+
+/*Formulario*/
+
+.fm{
+    
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 20px;
+    background: #fff7eb;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+   
+}
+
+.fm input, .fm button{
+    width:95%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.fm select, .fm button{
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1rem;
+    border: 1px solid #6b6b6b;
+    border-radius: 5px;
+}
+
+.fm button{
+    background-color: #6b6b6b;
+    color: white;
+    cursor: pointer;
+}
+
+.fm button:hover{
+    background-color: #403c3c;
+}
+
