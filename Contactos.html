@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <title>HoodStyle</title>
+    <header>
+
+        <div class="menu">
+            <div class="logo">
+                <img src="img/logo2.jpg" alt="">
+            </div>
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+            <nav id="navbar">
+    <ul>
+        <a href="Index.html"" ><li>Inicio</li></a>
+        <a href="Nosotros.html" ><li>Nosotros</li></a>
+        <a href="Productos.html" ><li>Productos</li></a>
+        <a href="Contactos.html" id="selected"><li>Contactos</li></a>
+    </ul>
+    
+    
+        </nav>
+    </div></header>
+        
+</head>
+<body>
+ 
+<div class="form">
+    <div class="container">
+        <h2>Contactanos</h2>
+        <p>Comunicate con nosotros para encontrar la mejor hoodie o diseñar la tuya propia</p>
+        <a href="tel:8092592713"><i class="fas fa-phone"></i> 809-259-2713</a>
+        <a href="mailto:HoodStyle17y@gmail.com"><i class="fas fa-envelope"></i> HoodStyle17y@gmail.com</a>
+        <a href="https://instagram.com/Hood_Style" target="_blank"><i class="fab fa-instagram"></i> Hood_Style</a>
+        
+    </div>
+    <form action="https://formsubmit.co/HoodStyle17y@gmail.com"  method="POST" autocomplete="on">
+        <input type="text" name="Nombre" placeholder="Nombre" class="campo">
+        <input type="email" name="email" placeholder="Correo" class="campo">
+        <textarea name="Mensaje" placeholder="Envia tu Mensaje"></textarea>
+        <input type="submit" name="enviar" value="Enviar mensaje" class="btn">
+
+    </form>
+</div>
+
+<script src="jv.js"></script>
+    <script>
+       
+
+            // Menú hamburguesa
+            $('#menu-toggle').on('click', function () {
+                $('#navbar ul').slideToggle(200);
+            });
+
+            $('#navbar a').on('click', function () {
+                if ($(window).width() <= 768) {
+                    $('#navbar ul').slideUp(200);
+                }
+            });
+
+            $(window).on('resize', function () {
+                if ($(window).width() > 768) {
+                    $('#navbar ul').css('display', 'flex');
+                } else {
+                    $('#navbar ul').css('display', 'none');
+                }
+            });
+      
+    </script>
+        
+</body>
+</html>

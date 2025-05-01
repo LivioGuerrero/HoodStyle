@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="menu">
+            <div class="logo">
+                <img src="img/logo2.jpg" alt="Logo">
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+            <nav id="navbar">
+                <ul>
+                    <li><a href="Index.html" id="selected">Inicio</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                    <li><a href="Productos.html">Productos</a></li>
+                    <li><a href="Contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="slider-container">
+        <div class="slider-images">
+            <div class="slider-img"><img src="img/1 slide.jpg" alt=""></div>
+            <div class="slider-img"><img src="img/2 slide.jpg" alt=""></div>
+            <div class="slider-img"><img src="img/3 slide.jpg" alt=""></div>
+            <div class="slider-img active">
+                <img src="img/4 slide.jpg" alt="">
+            </div>
+            <div class="slider-img"><img src="img/5 slide.jpg" alt=""></div>
+            <div class="slider-img"><img src="img/6 slide.jpg" alt=""></div>
+            <div class="slider-img"><img src="img/7 slide.jpg" alt=""></div>
+        </div>
+        <a href="Nosotros.html" id="vol">¿Quiénes Somos?</a>
+    </section>
+
+    <!-- 🔽 Abrigos (productos) agregados aquí -->
+    <section class="product-container">
+        <div class="product">
+            <img src="img/1 slide.jpg" alt="Abrigo 1" style="width:100%; max-width:300px;">
+           
+        </div>
+        <div class="product">
+            <img src="img/2 slide.jpg" alt="Abrigo 2" style="width:100%; max-width:300px;">
+            
+        </div>
+        <div class="product">
+            <img src="img/3 slide.jpg" alt="Abrigo 3" style="width:100%; max-width:300px;">
+            
+        </div>
+        <div class="product">
+            <img src="img/4 slide.jpg" alt="Abrigo 3" style="width:100%; max-width:300px;">
+            
+        </div>
+        <div class="product">
+            <img src="img/5 slide.jpg" alt="Abrigo 3" style="width:100%; max-width:300px;">
+            
+        </div>
+        <div class="product">
+            <img src="img/6 slide.jpg" alt="Abrigo 3" style="width:100%; max-width:300px;">
+            
+        </div>
+        <div class="product">
+            <img src="img/7 slide.jpg" alt="Abrigo 3" style="width:100%; max-width:300px;">
+            
+        </div>
+    </section>
+
+    <script src="jv.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider-img').on('click', function () {
+                $('.slider-img').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            // Menú hamburguesa
+            $('#menu-toggle').on('click', function () {
+                $('#navbar ul').slideToggle(200);
+            });
+
+            $('#navbar a').on('click', function () {
+                if ($(window).width() <= 768) {
+                    $('#navbar ul').slideUp(200);
+                }
+            });
+
+            $(window).on('resize', function () {
+                if ($(window).width() > 768) {
+                    $('#navbar ul').css('display', 'flex');
+                } else {
+                    $('#navbar ul').css('display', 'none');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+    
